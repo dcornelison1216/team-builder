@@ -9,7 +9,7 @@ const Form = ({ addNewMember }) => {
   const submitForm = event => {
     event.preventDefault();
     addNewMember(member);
-    setMember({ name: '', email: '', role: ''});
+    setMember({ name: '', email: '', role: 'No role specified'});
   };
 
   return (
