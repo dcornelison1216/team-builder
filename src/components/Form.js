@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 
-
-
 const Form = ({ addNewMember }) => {
-
-  const [member, setMember] = useState({name: "", email: "", role: ""});
-
+  const [member, setMember] = useState({name: '', email: '', role: ''});
   const handleChanges = event => {
-    console.log(event.target.value);
-    setMember({ ...member, [event.target.name]: event.target.value });
-  }
+    setMember({ ...member, [event.target.id]: event.target.value });
+  };
+
+  const submitForm = event => {
+    event.preventDefault();
+    addNewMember(member);
+    setMember({ name: '', email: '', role: ''});
+  };
 
   return (
-    <form>
+    <form onSubmit={submitForm}>
       <label htmlFor="name">Name: </label>
       <input
         id="name"
@@ -22,6 +23,7 @@ const Form = ({ addNewMember }) => {
         name="name"
         onChange={handleChanges}
       /><br /><br />
+
       <label htmlFor="email">Email: </label>
       <input
         id="email"
@@ -31,15 +33,18 @@ const Form = ({ addNewMember }) => {
         name="email"
         onChange={handleChanges}
       /><br /><br />
+
       <label htmlFor="role">Role: </label>
-      <select id="role" style={{width: "150px"}}>
-        <option value="backendEngineer">Backend Engineer</option>
-        <option value="designer">Designer</option>
-        <option value="frontendEngineer">Frontend Engineer</option>
-        <option value="lightningRod">The person who doesn't do any work and everyone else in the group actively hates</option>
-        <option value="ux">UX</option>
-        <option value="other">Other</option>
-      </select><br /><br />
+        <select id="role" style={{width: "150px"}} onChange={handleChanges}>
+          <option value={null} onChange={handleChanges}>Select role</option>
+          <option value='Backend Engineer' onChange={handleChanges}>Backend Engineer</option>
+          <option value='Designer' onChange={handleChanges}>Designer</option>
+          <option value='Frontend Engineer' onChange={handleChanges}>Frontend Engineer</option>
+          <option value='Lightning Rod' onChange={handleChanges}>The person who doesn't do any work and everyone else in the group actively hates</option>
+          <option value='UX' onChange={handleChanges}>UX</option>
+          <option value='Other' onChange={handleChanges}>Other</option>
+        </select><br /><br />
+
       <button type="submit">Add Member</button>
     </form>
   )
