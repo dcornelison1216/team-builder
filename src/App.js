@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import NewMemberForm from './components/NewMemberForm'
-
-const [members, setMembers] = useState({});
+import Form from './components/Form'
 
 function App() {
+  const [members, setMembers] = useState({});
   return (
     <div className="App">
-
+      <Form />
     </div>
   );
 }
