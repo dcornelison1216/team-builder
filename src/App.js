@@ -4,7 +4,7 @@ import Members from './components/Members';
 import styled from 'styled-components';
 
 const AppContainer = styled.div`
-font-family: 'Chalkduster', fantasy;
+font-family: 'Chalkduster';
 text-align: center;
 background-image: linear-gradient(90deg, #e8d714 0%,#b2c1ff 80%);
 padding: 30px;

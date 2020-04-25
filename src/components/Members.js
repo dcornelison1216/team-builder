@@ -5,7 +5,7 @@ const MemberCard = styled.div`
 background: linear-gradient(90deg, #b2c1ff 0%,#fffba3 80%);
 width: 100%;
 max-width: 250px;
-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), 0 5px 2px rgba(0, 0, 0, 0.12);
+box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .5), 5px 5px 5px rgba(0, 0, 0, .25);
 padding: 10px;
 margin: 16px auto;
 text-align: left;
