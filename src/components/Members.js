@@ -15,6 +15,11 @@ border-radius: 5px;
 const CardsContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
+justify-content: space-evenly;
+`;
+
+const Name = styled.h2`
+text-transform: capitalize;
 `;
 
 const Members = props => {
@@ -22,7 +27,7 @@ const Members = props => {
     <CardsContainer>
       {props.members.map(member => (
         <MemberCard key={member.id}>
-        <h2>{member.name}</h2>
+        <Name>{member.name}</Name>
         <p>{member.email}</p>
         <p>{member.role}</p>
         </MemberCard>

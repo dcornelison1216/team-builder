@@ -16,6 +16,7 @@ const Form = ({ addNewMember }) => {
     <form onSubmit={submitForm}>
       <label htmlFor="name">Name: </label>
       <input
+        style={{fontFamily: 'Chalkduster, fantasy'}}
         id="name"
         type="text"
         placeholder="Enter your name"
@@ -26,6 +27,7 @@ const Form = ({ addNewMember }) => {
 
       <label htmlFor="email">Email: </label>
       <input
+        style={{fontFamily: 'Chalkduster, fantasy'}}
         id="email"
         type="text"
         placeholder="Enter your email"
@@ -35,7 +37,7 @@ const Form = ({ addNewMember }) => {
       /><br /><br />
 
       <label htmlFor="role">Role: </label>
-        <select id="role" style={{width: "150px"}} onChange={handleChanges}>
+        <select id="role" style={{width: "150px", fontFamily: 'Chalkduster, fantasy'}} onChange={handleChanges}>
           <option value={null} onChange={handleChanges}>Select role</option>
           <option value='Backend Engineer' onChange={handleChanges}>Backend Engineer</option>
           <option value='Designer' onChange={handleChanges}>Designer</option>
@@ -45,7 +47,7 @@ const Form = ({ addNewMember }) => {
           <option value='Other' onChange={handleChanges}>Other</option>
         </select><br /><br />
 
-      <button type="submit">Add Member</button>
+      <button type="submit" style={{fontFamily: 'Chalkduster, fantasy'}}>Add Member</button>
     </form>
   )
 }
